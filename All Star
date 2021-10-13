@@ -5,8 +5,4 @@ if jogadores > 4 then
 	local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 	objeto.CFrame = coordenada
 end
-if jogadores <= 4 then
-	keypress(2)
-	keypress(3)
-	keypress(4)
-end
+
