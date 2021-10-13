@@ -5,4 +5,24 @@ if jogadores > 4 then
 	local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 	objeto.CFrame = coordenada
 end
+local args = {
+    [1] = "SpawnAllyODD",
+    [2] = Unidade1
+}
 
+game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+end
+local args = {
+    [1] = "SpawnAllyODD",
+    [2] = Unidade2
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+end
+local args = {
+    [1] = "SpawnAllyODD",
+    [2] = Unidade3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+end
