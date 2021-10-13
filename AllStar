@@ -25,4 +25,9 @@ while players <= 4 do
 	}
 
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+	local args = {
+	    [1] = "Critical"
+	}
+
+	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
 end
