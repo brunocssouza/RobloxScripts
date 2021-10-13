@@ -1,3 +1,7 @@
+function wait(seconds)
+    local start = os.time()
+    repeat until os.time() > start + seconds
+end
 players = #game.Players:GetPlayers()
 if players > 4 then
 	local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
@@ -5,24 +9,26 @@ if players > 4 then
 	local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 	objeto.CFrame = coordenada
 end
-local args = {
-    [1] = "SpawnAllyODD",
-    [2] = Unidade1
-}
+while players <= 4 then
+	local args = {
+    	[1] = "SpawnAllyODD",
+    	[2] = Unidade1
+	}
 
-game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-end
-local args = {
-    [1] = "SpawnAllyODD",
-    [2] = Unidade2
-}
+	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+	wait(2)
+	local args = {
+		[1] = "SpawnAllyODD",
+		[2] = Unidade2
+	}
 
-game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-end
-local args = {
-    [1] = "SpawnAllyODD",
-    [2] = Unidade3
-}
+	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+	wait(2)
+	local args = {
+		[1] = "SpawnAllyODD",
+		[2] = Unidade3
+	}
 
-game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+	wait(2)
 end
