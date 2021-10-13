@@ -11,8 +11,8 @@ if players > 4 then
 end
 while players <= 4 then
 	local args = {
-    	[1] = "SpawnAllyODD",
-    	[2] = Unidade1
+    		[1] = "SpawnAllyODD",
+    		[2] = Unidade1
 	}
 
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
