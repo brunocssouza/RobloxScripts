@@ -1,14 +1,15 @@
 players = #game.Players:GetPlayers()
-if players > 4 then
+if players > 4 then do
 	local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
 	local experiencia = game:GetService("Players")
 	local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 	objeto.CFrame = coordenada
 end
-while players <= 4 then
+end
+while players <= 4 do
 	local args = {
-    		[1] = "SpawnAllyODD",
-    		[2] = Unidade1
+    	[1] = "SpawnAllyODD",
+    	[2] = Unidade1
 	}
 
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
