@@ -32,3 +32,4 @@ while players <= 4 then
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
 	wait(2)
 end
+
