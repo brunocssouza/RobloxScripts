@@ -1,5 +1,5 @@
-jogadores = #game.Players:GetPlayers()
-if jogadores > 4 then
+players = #game.Players:GetPlayers()
+if players > 4 then
 	local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
 	local experiencia = game:GetService("Players")
 	local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
