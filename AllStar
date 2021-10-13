@@ -13,19 +13,16 @@ while players <= 4 do
 	}
 
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	wait(2)
 	local args = {
 		[1] = "SpawnAllyODD",
 		[2] = Unidade2
 	}
 
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	wait(2)
 	local args = {
 		[1] = "SpawnAllyODD",
 		[2] = Unidade3
 	}
 
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	wait(2)
 end
