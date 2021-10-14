@@ -6,7 +6,6 @@ while loop == true do
 		local experiencia = game:GetService("Players")
 		local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 		objeto.CFrame = coordenada
-	end
 	else
 		local args = {
 			[1] = "SpawnAllyODD",
@@ -31,5 +30,4 @@ while loop == true do
 		}
 
 		game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
-	end)
 end
