@@ -1,30 +1,32 @@
-players = #game.Players:GetPlayers()
 loop = True
-if players > 4 then
-	local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125) 	-- Teleporte para o evento
-	local experiencia = game:GetService("Players")
-	local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-	objeto.CFrame = coordenada
-else
-	local args = {
-		[1] = "SpawnAllyODD",
-		[2] = Unidade1
-	}
 
-	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	local args = {
-		[1] = "SpawnAllyODD",
-		[2] = Unidade2
-	}
+players = #game.Players:GetPlayers() 
+local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125) 	-- TELEPORTE
+local experiencia = game:GetService("Players")
+local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
+objeto.CFrame = coordenada
 
-	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	local args = {
-		[1] = "SpawnAllyODD",
-		[2] = Unidade3
-	}
+local args = {                                                                          -- UNIDADE 1
+	[1] = "SpawnAllyODD",
+	[2] = Unidade1
+}
 
-	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	local args = {
+game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+local args = {                                                                          -- UNIDADE 2
+	[1] = "SpawnAllyODD",
+	[2] = Unidade2
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+local args = {                                                                          -- UNIDADE 3
+	[1] = "SpawnAllyODD",
+	[2] = Unidade3
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+
+while loop == True then
+	local args = {                                                                  -- CRITICAL                                                                
 		[1] = "Critical"
 	}
 
