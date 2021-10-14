@@ -1,5 +1,5 @@
 wait(10)
-local coordenada = CFrame.new(-723.45684814453, 13656.711914063, -8477.357421875)
+local coordenada = CFrame.new(-721.5, 13656.711914063, -8477.357421875)
 local experiencia = game:GetService("Players")
 local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 objeto.CFrame = coordenada
