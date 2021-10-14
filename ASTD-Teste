@@ -1,16 +1,4 @@
-game["Loaded"]:Wait()
-local Players = game:GetService("Players")
-local LP = Players["LocalPlayer"]
-while not LP do
-   Players["ChildAdded"]:Wait()
-   LP = Players["LocalPlayer"]
-end
-local Char = LP["Character"]
-while not Char do
-   LP["CharacterAdded"]:Wait()
-   Char = LP["Character"]
-end
-
+wait(10)
 local coordenada = CFrame.new(-721.5, 13656.711914063, -8477.357421875)
 local experiencia = game:GetService("Players")
 local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
