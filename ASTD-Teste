@@ -7,7 +7,7 @@ while loop == true do
 		local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 		objeto.CFrame = coordenada
 	end
-	elseif players <= 4 then
+	else
 		local args = {
 			[1] = "SpawnAllyODD",
 			[2] = Unidade1
