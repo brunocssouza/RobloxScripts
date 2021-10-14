@@ -1,9 +1,11 @@
+- Teleporte para o evento
 loop = True
 local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
 local experiencia = game:GetService("Players")
 local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 objeto.CFrame = coordenada
 
+-- Unidades e afins
 while loop == True do
 	local args = {
     	[1] = "SpawnAllyODD",
