@@ -1,11 +1,9 @@
 loop = True
 
-if not (char.Parent.Humanoid:GetState() == Enum.HumanoidStateType.FallingDown) then
-	players = #game.Players:GetPlayers() 
-	local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
-	local experiencia = game:GetService("Players")
-	local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-	objeto.CFrame = coordenada
+local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
+local experiencia = game:GetService("Players")
+local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
+objeto.CFrame = coordenada
 end
 
 local vu = game:GetService("VirtualUser")
