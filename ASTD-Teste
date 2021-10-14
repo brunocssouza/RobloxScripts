@@ -34,5 +34,4 @@ while loop == True do
 	-- Mantém a câmera fixada caso ela vire 'CameraType.Track' por a caso.
   	local camera = workspace.CurrentCamera
 	camera.CameraType = Enum.CameraType.Track
-	wait(20)
 end
