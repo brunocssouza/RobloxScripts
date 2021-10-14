@@ -1,9 +1,10 @@
-if not game:IsLoaded() then
-   game.Loaded:Wait()
-end
-loop = "sim"
-
-local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
+wait(10)
+local coordenada = CFrame.new(-723.45684814453, 13656.711914063, -8477.357421875)
+local experiencia = game:GetService("Players")
+local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
+objeto.CFrame = coordenada
+wait(3)
+local coordenada = CFrame.new(113.54932403564, 39.825588226318, -0.61703759431839)
 local experiencia = game:GetService("Players")
 local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 objeto.CFrame = coordenada
