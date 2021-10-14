@@ -7,6 +7,8 @@ objeto.CFrame = coordenada
 
 -- Unidades e afins
 while loop == True do
+  	local camera = workspace.CurrentCamera
+	camera.CameraType = Enum.CameraType.Track
 	local args = {
     	[1] = "SpawnAllyODD",
     	[2] = Unidade1
