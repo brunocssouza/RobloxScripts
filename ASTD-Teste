@@ -1,15 +1,13 @@
--- Teleporte para o evento
 loop = True
+local camera = workspace.CurrentCamera
+-- Teleporte para o evento
 local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
 local experiencia = game:GetService("Players")
 local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 objeto.CFrame = coordenada
--- Mantém a câmera fixada caso ela vire 'CameraType.Track' por a caso.
-local camera = workspace.CurrentCamera
-camera.CameraType = Enum.CameraType.Track
+
 -- Unidades e afins
 while loop == True do
-  	local camera = workspace.CurrentCamera
 	camera.CameraType = Enum.CameraType.Track
 	local args = {
     	[1] = "SpawnAllyODD",
