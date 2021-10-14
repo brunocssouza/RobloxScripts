@@ -1,9 +1,21 @@
 loop = True
+
+-- TELEPORTE
 players = #game.Players:GetPlayers() 
-local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125) 	-- TELEPORTE
+local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
 local experiencia = game:GetService("Players")
 local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 objeto.CFrame = coordenada
+
+-- ANTI-AFK
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+-- POSICIONAMENTO DE UNIDADES E ACIONAMENTO DE CRITICALS
 while loop == True do
 	local args = {
     	[1] = "SpawnAllyODD",
