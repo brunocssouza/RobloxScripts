@@ -22,10 +22,3 @@ local args = {                                                                  
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-while loop == True then
-	local args = {                                                                  -- CRITICAL                                                                
-		[1] = "Critical"
-	}
-
-	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
-end
