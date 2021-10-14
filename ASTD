@@ -1,3 +1,4 @@
+-- Se tiver mais de 4 jogadores na sessão, vai teleportar o player até o ponto de Queue do Evento.
 players = #game.Players:GetPlayers()
 if players > 4 then do
 	local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
@@ -6,6 +7,8 @@ if players > 4 then do
 	objeto.CFrame = coordenada
 end
 end
+
+-- Se tiver menos de 4 jogadores na sessão, vai colocar as unidades (especificadas pelo jogador no .lua)
 while players <= 4 do
 	local args = {
     	[1] = "SpawnAllyODD",
