@@ -1,5 +1,6 @@
-game.Players.LocalPlayer.CharacterAdded:Wait()
-game.Players.LocalPlayer.CharacterAdded:Connect(function(Character)
+if not game:IsLoaded() then
+   game.Loaded:Wait()
+end
 loop = "sim"
 
 local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125)
@@ -37,4 +38,3 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
-end)
