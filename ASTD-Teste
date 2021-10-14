@@ -1,11 +1,9 @@
 loop = True
-
 players = #game.Players:GetPlayers() 
 local coordenada = CFrame.new(-723.59973144531, 13656.712890625, -8472.9814453125) 	-- TELEPORTE
 local experiencia = game:GetService("Players")
 local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 objeto.CFrame = coordenada
-
 local args = {                                                                          -- UNIDADE 1
 	[1] = "SpawnAllyODD",
 	[2] = Unidade1
@@ -24,7 +22,6 @@ local args = {                                                                  
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-
 while loop == True then
 	local args = {                                                                  -- CRITICAL                                                                
 		[1] = "Critical"
