@@ -21,7 +21,7 @@ local section2 = page:addSection("Section 2")
 section1:addToggle("Farming", nil, function (value)
 print("Toggled", value)
 if value then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/brunocssouza/RobloxScripts/main/ASTD-Unstable", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/brunocssouza/RobloxScripts/main/ASTD-UnstableScript", true))()
 end
 end)
 section1:addButton("Button", function()
