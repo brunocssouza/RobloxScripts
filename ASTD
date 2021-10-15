@@ -3,11 +3,20 @@ function Tp(lugar)
 	end
 
 function Spawn(unit)
-	args = {
+	local args = {
 	[1] = "SpawnAllyODD",
 	[2] = unit
 	}
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+	end
+
+function Critical()
+	local args = {
+	    [1] = "Critical"
+	}
+
+	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
+	wait(1)
 	end
 
 while wait() do
@@ -20,7 +29,9 @@ while wait() do
 			Spawn(Unidade1)
 			Spawn(Unidade2)
 			Spawn(Unidade3)
-			break
+			while wait() do
+				Critical()
+			end
 		end
 	end
 end
