@@ -10,6 +10,14 @@ function Spawn(unit)
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
 	end
 
+function Critical()
+	local args = {
+	    [1] = "Critical"
+	}
+
+	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
+	wait(1)
+
 while wait() do
 	if game.Players.LocalPlayer.Character then
 		if game.Workspace:FindFirstChild("Queue") ~= nil then
@@ -20,7 +28,9 @@ while wait() do
 			Spawn(Unidade1)
 			Spawn(Unidade2)
 			Spawn(Unidade3)
-			break
+			while wait() do
+				Critical()
+			end
 		end
 	end
 end
