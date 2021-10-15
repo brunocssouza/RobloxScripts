@@ -1,8 +1,5 @@
-function Tp(x, y, z)
-	getgenv().coordenada = CFrame.new(x, y, z)
-	getgenv().experiencia = game:GetService("Players")
-	getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-	getgenv().objeto.CFrame = coordenada
+function Tp(lugar)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lugar.CFrame
 	end
 
 function Spawn(unit)
@@ -13,11 +10,17 @@ function Spawn(unit)
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
 	end
 
-wait(10)
-Tp(-723.45684814453, 13656.711914063, -8477.357421875)
-wait(4)
-Tp(113.54932403564, 39.825588226318, -0.61703759431839)
-
-Spawn(Unidade1)
-Spawn(Unidade2)
-Spawn(Unidade3)
+while wait() do
+	if game.Players.LocalPlayer.Character then
+		if game.Workspace:FindFirstChild("Queue") ~= nil then
+			Tp(game:GetService("Workspace").Queue.Sacri.ExamDoor)
+			break
+		end
+		if game.Workspace:FindFirstChild("Queue") == nil then
+			Spawn(Unidade1)
+			Spawn(Unidade2)
+			Spawn(Unidade3)
+			break
+		end
+	end
+end
