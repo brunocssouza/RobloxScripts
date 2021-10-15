@@ -8,8 +8,8 @@ LightContrast = Color3.fromRGB(108, 43, 43),
 DarkContrast = Color3.fromRGB(44, 21, 21),  
 TextColor = Color3.fromRGB(255, 255, 255)
 }
-local page = venyx:addPage("Test", 5012544693)
-local section1 = page:addSection("Section 1")
+local page = venyx:addPage("Event", 5012544693)
+local section1 = page:addSection("Halloween Event")
 local section2 = page:addSection("Section 2")
 section1:addToggle("Toggle", nil, function(value)
 print("Toggled", value)
@@ -23,7 +23,7 @@ if focusLost then
 venyx:Notify("Title", value)
 end
 end)
-section2:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
+section1:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
 print("Activated Keybind")
 venyx:toggle()
 end, function()
