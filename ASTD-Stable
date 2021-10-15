@@ -1,6 +1,4 @@
-if not game.Players.LocalPlayer.Character then
-	player.CharacterAdded:Wait()
-end
+wait(5)
 
 function Spawn(unit)
 	local args = {
