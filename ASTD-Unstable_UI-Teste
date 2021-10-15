@@ -8,10 +8,10 @@ LightContrast = Color3.fromRGB(108, 43, 43),
 DarkContrast = Color3.fromRGB(44, 21, 21),  
 TextColor = Color3.fromRGB(255, 255, 255)
 }
-local page = venyx:addPage("Event", 5012544693)
+local page = venyx:addPage("EVENT", 5012544693)
 local section1 = page:addSection("Halloween Event")
 local section2 = page:addSection("Section 2")
-section1:addToggle("Toggle", nil, function(value)
+section1:addToggle("Farming", nil, function(value)
 print("Toggled", value)
 end)
 section1:addButton("Button", function()
@@ -39,11 +39,4 @@ section2:addDropdown("Dropdown", {"Hello", "World", "Hello World", "Word", 1, 2,
 print("Selected", text)
 end)
 section2:addButton("Button")
-local theme = venyx:addPage("Theme", 5012544693)
-local colors = theme:addSection("Colors")
-for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
-colors:addColorPicker(theme, color, function(color3)
-venyx:setTheme(theme, color3)
-end)
-end
 venyx:SelectPage(venyx.pages[1], true)
