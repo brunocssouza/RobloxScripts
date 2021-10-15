@@ -1,6 +1,4 @@
-function Tp(lugar)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lugar.CFrame
-	end
+game.Players.LocalPlayer.CharacterAdded:Wait()
 
 function Spawn(unit)
 	local args = {
@@ -12,27 +10,25 @@ function Spawn(unit)
 
 function Critical()
 	local args = {
-	    [1] = "Critical"
+		[1] = "Critical"
 	}
 
 	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
 	wait(1)
 	end
 
-wait(15)
-while wait() do
-	if game.Players.LocalPlayer.Character then
-		if game.Workspace:FindFirstChild("Queue") ~= nil then
-			Tp(game:GetService("Workspace").Queue.Sacri.ExamDoor)
-			break
-		end
-		if game.Workspace:FindFirstChild("Queue") == nil then
-			Spawn(Unidade1)
-			Spawn(Unidade2)
-			Spawn(Unidade3)
-			while wait() do
-				Critical()
-			end
-		end
+getgenv().player = game.Players.LocalPlayer
+getgenv().playerHead = player.Character.Head
+
+if game.Workspace:FindFirstChild("Queue") then
+	firetouchinterest(playerHead, game.Workspace.Queue.Sacri.ExamDoor, 0)
+	wait(0.1)
+	firetouchinterest(playerHead, game.Workspace.Queue.Sacri.ExamDoor, 1)
+else
+	Spawn(Unidade1)
+	Spawn(Unidade2)
+	Spawn(Unidade3)
+	while wait() do
+		Critical()
 	end
 end
