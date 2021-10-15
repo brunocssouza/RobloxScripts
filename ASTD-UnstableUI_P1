@@ -703,10 +703,10 @@ do
 			
 			debounce = true
 			text.TextSize = 0
-			utility:Tween(button.Title, {TextSize = 14}, 0.2)
+			utility:Tween(button.Title, {TextSize = 16}, 0.2)
 			
 			wait(0.2)
-			utility:Tween(button.Title, {TextSize = 12}, 0.2)
+			utility:Tween(button.Title, {TextSize = 16}, 0.2)
 			
 			if callback then
 				callback(function(...)
@@ -816,7 +816,7 @@ do
 				Font = Enum.Font.Gotham,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 16,
 				TextTransparency = 0.10000000149012,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
@@ -841,7 +841,7 @@ do
 					Font = Enum.Font.GothamSemibold,
 					Text = default or "",
 					TextColor3 = themes.TextColor,
-					TextSize = 11
+					TextSize = 16
 				})
 			})
 		})
@@ -924,7 +924,7 @@ do
 				Font = Enum.Font.Gotham,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 16,
 				TextTransparency = 0.10000000149012,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
@@ -948,7 +948,7 @@ do
 					Font = Enum.Font.GothamSemibold,
 					Text = default and default.Name or "None",
 					TextColor3 = themes.TextColor,
-					TextSize = 11
+					TextSize = 16
 				})
 			})
 		})
@@ -1029,7 +1029,7 @@ do
 				Font = Enum.Font.Gotham,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 16,
 				TextTransparency = 0.10000000149012,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
@@ -1081,7 +1081,7 @@ do
 				Font = Enum.Font.GothamSemibold,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 14,
+				TextSize = 16,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
 			utility:Create("ImageButton", {
@@ -1202,7 +1202,7 @@ do
 							Font = Enum.Font.Gotham,
 							Text = "R:",
 							TextColor3 = themes.TextColor,
-							TextSize = 10.000
+							TextSize = 16.000
 						}),
 						utility:Create("TextBox", {
 							Name = "Textbox",
@@ -1214,7 +1214,7 @@ do
 							PlaceholderColor3 = themes.DarkContrast,
 							Text = "255",
 							TextColor3 = themes.TextColor,
-							TextSize = 10.000
+							TextSize = 16.000
 						})
 					}),
 					utility:Create("ImageLabel", {
@@ -1236,7 +1236,7 @@ do
 							Font = Enum.Font.Gotham,
 							Text = "G:",
 							TextColor3 = themes.TextColor,
-							TextSize = 10.000
+							TextSize = 16.000
 						}),
 						utility:Create("TextBox", {
 							Name = "Textbox",
@@ -1247,7 +1247,7 @@ do
 							Font = Enum.Font.Gotham,
 							Text = "255",
 							TextColor3 = themes.TextColor,
-							TextSize = 10.000
+							TextSize = 16.000
 						})
 					}),
 					utility:Create("ImageLabel", {
@@ -1269,7 +1269,7 @@ do
 							Font = Enum.Font.Gotham,
 							Text = "B:",
 							TextColor3 = themes.TextColor,
-							TextSize = 10.000
+							TextSize = 16.000
 						}),
 						utility:Create("TextBox", {
 							Name = "Textbox",
@@ -1280,7 +1280,7 @@ do
 							Font = Enum.Font.Gotham,
 							Text = "255",
 							TextColor3 = themes.TextColor,
-							TextSize = 10.000
+							TextSize = 16.000
 						})
 					}),
 				}),
@@ -1303,7 +1303,7 @@ do
 						Font = Enum.Font.Gotham,
 						Text = "Submit",
 						TextColor3 = themes.TextColor,
-						TextSize = 11.000
+						TextSize = 16.000
 					})
 				})
 			})
@@ -1553,7 +1553,7 @@ do
 				Font = Enum.Font.Gotham,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 16,
 				TextTransparency = 0.10000000149012,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
@@ -1567,7 +1567,7 @@ do
 				Font = Enum.Font.GothamSemibold,
 				Text = default or min,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 16,
 				TextXAlignment = Enum.TextXAlignment.Right
 			}),
 			utility:Create("TextLabel", {
@@ -1715,7 +1715,7 @@ do
 					Font = Enum.Font.Gotham,
 					Text = title,
 					TextColor3 = themes.TextColor,
-					TextSize = 12,
+					TextSize = 16,
 					TextTransparency = 0.10000000149012,
 					TextXAlignment = Enum.TextXAlignment.Left
 				}),
@@ -2127,7 +2127,7 @@ do
 					Font = Enum.Font.Gotham,
 					Text = value,
 					TextColor3 = themes.TextColor,
-					TextSize = 12,
+					TextSize = 16,
 					TextXAlignment = "Left",
 					TextTransparency = 0.10000000149012
 				})
