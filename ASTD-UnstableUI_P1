@@ -325,7 +325,7 @@ do
 				Font = Enum.Font.Gotham,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 18,
 				TextTransparency = 0.65,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
@@ -399,7 +399,7 @@ do
 					Font = Enum.Font.GothamSemibold,
 					Text = title,
 					TextColor3 = themes.TextColor,
-					TextSize = 12,
+					TextSize = 16,
 					TextXAlignment = Enum.TextXAlignment.Left,
 					TextTransparency = 1
 				}),
@@ -547,7 +547,7 @@ do
 				ZIndex = 4,
 				Font = Enum.Font.GothamSemibold,
 				TextColor3 = themes.TextColor,
-				TextSize = 14.000,
+				TextSize = 16.000,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
 			utility:Create("TextLabel", {
@@ -558,7 +558,7 @@ do
 				ZIndex = 4,
 				Font = Enum.Font.Gotham,
 				TextColor3 = themes.TextColor,
-				TextSize = 12.000,
+				TextSize = 16.000,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
 			utility:Create("ImageButton", {
@@ -592,7 +592,7 @@ do
 		notification.Text.Text = text
 		
 		local padding = 10
-		local textSize = game:GetService("TextService"):GetTextSize(text, 12, Enum.Font.Gotham, Vector2.new(math.huge, 16))
+		local textSize = game:GetService("TextService"):GetTextSize(text, 16, Enum.Font.Gotham, Vector2.new(math.huge, 16))
 		
 		notification.Position = library.lastNotification or UDim2.new(0, padding, 1, -(notification.AbsoluteSize.Y + padding))
 		notification.Size = UDim2.new(0, 0, 0, 60)
@@ -681,7 +681,7 @@ do
 				Font = Enum.Font.Gotham,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 16,
 				TextTransparency = 0.10000000149012
 			})
 		})
@@ -743,7 +743,7 @@ do
 				Font = Enum.Font.Gotham,
 				Text = title,
 				TextColor3 = themes.TextColor,
-				TextSize = 12,
+				TextSize = 16,
 				TextTransparency = 0.10000000149012,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
