@@ -3,6 +3,8 @@ function tp(x, y, z)
 	getgenv().experiencia = game:GetService("Players")
 	getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 	getgenv().objeto.CFrame = coordenada
+	end
+
 wait(10)
 tp(-723.45684814453, 13656.711914063, -8477.357421875)
 wait(4)
