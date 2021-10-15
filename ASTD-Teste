@@ -17,10 +17,15 @@ function Tp2(x, y, z)
 	getgenv().objeto.CFrame = coordenada
 	end
 
-wait(10)
-Tp(game:GetService("Workspace").Queue.Sacri.ExamDoor)
-wait(4)
-Tp2(113.54932403564, 39.825588226318, -0.61703759431839)
+while wait() do
+	if game.Players.LocalPlayer.Character then
+		wait(10)
+		Tp(game:GetService("Workspace").Queue.Sacri.ExamDoor)
+		wait(4)
+		Tp2(113.54932403564, 39.825588226318, -0.61703759431839)
+		break
+	end
+end
 
 Spawn(Unidade1)
 Spawn(Unidade2)
