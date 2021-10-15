@@ -1,13 +1,13 @@
+function tp(x, y, z)
+	getgenv().coordenada = CFrame.new(x, y, z)
+	getgenv().experiencia = game:GetService("Players")
+	getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
+	getgenv().objeto.CFrame = coordenada
+
 wait(10)
-getgenv().coordenada = CFrame.new(-721.5, 13656.711914063, -8477.357421875)
-getgenv().experiencia = game:GetService("Players")
-getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-getgenv().objeto.CFrame = coordenada
+tp(-723.45684814453, 13656.711914063, -8477.357421875)
 wait(4)
-getgenv().coordenada = CFrame.new(113.54932403564, 39.825588226318, -0.61703759431839)
-getgenv().experiencia = game:GetService("Players")
-getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-getgenv().objeto.CFrame = coordenada
+tp(113.54932403564, 39.825588226318, -0.61703759431839)
 
 vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
