@@ -6,10 +6,6 @@
 
 ------------------------------- SCRIPT ---------------------------------------
 
-Unidade1 = getgenv().Unidade1
-Unidade2 = getgenv().Unidade2
-Unidade3 = getgenv().Unidade3
-
 _G.settingsTable = {
 	autoFarming = false
 }
