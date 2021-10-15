@@ -19,6 +19,7 @@ function Critical()
 	wait(1)
 	end
 
+wait(15)
 while wait() do
 	if game.Players.LocalPlayer.Character then
 		if game.Workspace:FindFirstChild("Queue") ~= nil then
