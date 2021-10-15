@@ -1,10 +1,10 @@
-------------------------------- PLAYER INPUT ---------------------------------
+------------------------------- PLAYER INPUT
 
 -- getgenv().Unidade1 = "Whitebeard (Final)" -- Exemplo1: Erwin
 -- getgenv().Unidade2 = "Whis" -- Exemplo2: Naruto Sage Of The Six Paths
 -- getgenv().Unidade3 = "SogeKing" -- Exemplo3: Whitebeard (Final)
 
-------------------------------- SCRIPT ---------------------------------------
+------------------------------- SCRIPT
 
 _G.settingsTable = {
 	autoFarming = false
