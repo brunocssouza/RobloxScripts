@@ -5,7 +5,7 @@
 -- getgenv().Unidade3 = "SogeKing" -- Exemplo3: Whitebeard (Final)
 
 ------------------------------- SCRIPT ---------------------------------------
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/brunocssouza/RobloxScripts/main/ASTD-UnstableUI_P1"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/brunocssouza/RobloxScripts/main/ASTD-UnstableUI"))()
 local venyx = library.new("All Star Tower Defense (Unstable Version)")
 local themes = {
 Background = Color3.fromRGB(14, 14, 14),
