@@ -6,6 +6,10 @@
 
 ------------------------------- SCRIPT ---------------------------------------
 
+Unidade1 = getgenv().Unidade1
+Unidade2 = getgenv().Unidade2
+Unidade3 = getgenv().Unidade3
+
 _G.settingsTable = {
 	autoFarming = false
 }
@@ -55,8 +59,9 @@ section1:addToggle("Farming 2", nil, function(bool)
 print("O Farming 2 esta ", bool)
 _G.settingsTable.autoFarming = bool
 saveSettings()
-if _G.settingsTable.autoFarming then
+if bool then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/brunocssouza/RobloxScripts/main/ASTD-UnstableScript", true))()
+print('oi')
 end
 end)
 
