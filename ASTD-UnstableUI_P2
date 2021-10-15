@@ -47,6 +47,4 @@ venyx:setTheme(theme, color3)
 end)
 end
 venyx:SelectPage(venyx.pages[1], true)
-else
-print('UI Desativada')
 end
