@@ -18,15 +18,17 @@ function Tp2(x, y, z)
 	end
 
 while wait() do
-	if game.Players.LocalPlayer.Character and game:GetService("Workspace").Queue.Sacri.ExamDoor then
-		wait(5)
-		Tp(game:GetService("Workspace").Queue.Sacri.ExamDoor)
-		break
-	end
-	if game.Players.LocalPlayer.Character and not game:GetService("Workspace").Queue.Sacri.ExamDoor then
-		Spawn(Unidade1)
-		Spawn(Unidade2)
-		Spawn(Unidade3)
-		break
+	if game.Players.LocalPlayer.Character then
+		if game.Workspace:FindFirstChild("Queue") ~= nil then
+			wait(5)
+			Tp(game:GetService("Workspace").Queue.Sacri.ExamDoor)
+			break
+		end
+		if game.Workspace:FindFirstChild("Queue") == nil then
+			Spawn(Unidade1)
+			Spawn(Unidade2)
+			Spawn(Unidade3)
+			break
+		end
 	end
 end
