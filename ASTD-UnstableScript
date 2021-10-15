@@ -4,16 +4,15 @@ function Spawn(unit)
 	[2] = unit
 	}
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	end
+end
 
 function Critical()
 	local args = {
 		[1] = "Critical"
 	}
-
 	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
 	wait(1)
-	end
+end
 
 getgenv().player = game.Players.LocalPlayer
 getgenv().playerHead = player.Character.Head
