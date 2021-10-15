@@ -1,40 +1,40 @@
 wait(10)
-local coordenada = CFrame.new(-721.5, 13656.711914063, -8477.357421875)
-local experiencia = game:GetService("Players")
-local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-objeto.CFrame = coordenada
+getgenv().coordenada = CFrame.new(-721.5, 13656.711914063, -8477.357421875)
+getgenv().experiencia = game:GetService("Players")
+getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
+getgenv().objeto.CFrame = coordenada
 wait(4)
-local coordenada = CFrame.new(113.54932403564, 39.825588226318, -0.61703759431839)
-local experiencia = game:GetService("Players")
-local objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-objeto.CFrame = coordenada
+getgenv().coordenada = CFrame.new(113.54932403564, 39.825588226318, -0.61703759431839)
+getgenv().experiencia = game:GetService("Players")
+getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
+getgenv().objeto.CFrame = coordenada
 
-local vu = game:GetService("VirtualUser")
+getgenv().vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
 vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 wait(1)
 vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-local args = {
+getgenv().args = {
 	[1] = "SpawnAllyODD",
 	[2] = Unidade1
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-local args = {
+getgenv().args = {
 	[1] = "SpawnAllyODD",
 	[2] = Unidade2
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-local args = {
+getgenv().args = {
 	[1] = "SpawnAllyODD",
 	[2] = Unidade3
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-local args = {
+getgenv().args = {
 	[1] = "Critical"
 }
 
