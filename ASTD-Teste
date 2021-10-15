@@ -10,17 +10,9 @@ function Spawn(unit)
 	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
 	end
 
-function Tp2(x, y, z)
-	getgenv().coordenada = CFrame.new(x, y, z)
-	getgenv().experiencia = game:GetService("Players")
-	getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
-	getgenv().objeto.CFrame = coordenada
-	end
-
 while wait() do
 	if game.Players.LocalPlayer.Character then
 		if game.Workspace:FindFirstChild("Queue") ~= nil then
-			wait(5)
 			Tp(game:GetService("Workspace").Queue.Sacri.ExamDoor)
 			break
 		end
