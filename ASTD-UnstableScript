@@ -1,0 +1,32 @@
+function Spawn(unit)
+	local args = {
+	[1] = "SpawnAllyODD",
+	[2] = unit
+	}
+	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+	end
+
+function Critical()
+	local args = {
+		[1] = "Critical"
+	}
+
+	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
+	wait(1)
+	end
+
+getgenv().player = game.Players.LocalPlayer
+getgenv().playerHead = player.Character.Head
+
+if game.Workspace:FindFirstChild("Queue") then
+	firetouchinterest(playerHead, game.Workspace.Queue.Sacri.ExamDoor, 0)
+	wait(0.1)
+	firetouchinterest(playerHead, game.Workspace.Queue.Sacri.ExamDoor, 1)
+else
+	Spawn(Unidade1)
+	Spawn(Unidade2)
+	Spawn(Unidade3)
+	while wait() do
+		Critical()
+	end
+end
