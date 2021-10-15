@@ -4,6 +4,22 @@ _G.settingsTable = {
 
 local filename = "astd-unstable-settings.json"
 
+function Spawn(unit)
+	local args = {
+	[1] = "SpawnAllyODD",
+	[2] = unit
+	}
+	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+end
+
+function Critical()
+	local args = {
+		[1] = "Critical"
+	}
+	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
+	wait(1)
+end
+
 function loadSettings()
     print('Loading settings...')
     local HttpService = game:GetService("HttpService")
@@ -27,6 +43,9 @@ function saveSettings()
 	end
 end
 
+getgenv().player = game.Players.LocalPlayer
+getgenv().playerHead = player.Character.Head
+
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/brunocssouza/RobloxScripts/main/ASTD-UnstableUI"))()
 local venyx = library.new("All Star Tower Defense (Unstable Version)")
@@ -48,25 +67,6 @@ print("O Farming 2 esta ", bool)
 _G.settingsTable.autoFarming = bool
 saveSettings()
 if _G.settingsTable.autoFarming then
-	function Spawn(unit)
-	local args = {
-	[1] = "SpawnAllyODD",
-	[2] = unit
-	}
-	game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-	end
-
-	function Critical()
-	local args = {
-		[1] = "Critical"
-	}
-	game:GetService("ReplicatedStorage").Remotes.Oddessey:FireServer(unpack(args))
-	wait(1)
-	end
-
-	getgenv().player = game.Players.LocalPlayer
-	getgenv().playerHead = player.Character.Head
-
 	if game.Workspace:FindFirstChild("Queue") then
 		firetouchinterest(playerHead, game.Workspace.Queue.Sacri.ExamDoor, 0)
 		wait(0.1)
@@ -75,11 +75,13 @@ if _G.settingsTable.autoFarming then
 		Spawn(Unidade1)
 		Spawn(Unidade2)
 		Spawn(Unidade3)
-	while wait() do
-		Critical()
+		while wait() do
+			Critical()
+		end
 	end
 end
 end)
+
 
 section1:addButton("Start Farming", function()
 print("Clicked")
