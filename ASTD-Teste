@@ -9,32 +9,32 @@ getgenv().experiencia = game:GetService("Players")
 getgenv().objeto = experiencia.LocalPlayer.Character.HumanoidRootPart
 getgenv().objeto.CFrame = coordenada
 
-getgenv().vu = game:GetService("VirtualUser")
+vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
 vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 wait(1)
 vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-getgenv().args = {
+args = {
 	[1] = "SpawnAllyODD",
 	[2] = Unidade1
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-getgenv().args = {
+args = {
 	[1] = "SpawnAllyODD",
 	[2] = Unidade2
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-getgenv().args = {
+args = {
 	[1] = "SpawnAllyODD",
 	[2] = Unidade3
 }
 
 game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-getgenv().args = {
+args = {
 	[1] = "Critical"
 }
 
