@@ -285,7 +285,7 @@ do
 						Font = Enum.Font.GothamBold,
 						Text = title,
 						TextColor3 = themes.TextColor,
-						TextSize = 14,
+						TextSize = 20,
 						TextXAlignment = Enum.TextXAlignment.Left
 					})
 				})
@@ -313,7 +313,7 @@ do
 			AutoButtonColor = false,
 			Font = Enum.Font.Gotham,
 			Text = "",
-			TextSize = 14
+			TextSize = 18
 		}, {
 			utility:Create("TextLabel", {
 				Name = "Title",
