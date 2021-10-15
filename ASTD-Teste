@@ -3,7 +3,7 @@ function Tp(lugar)
 	end
 
 function Spawn(unit)
-	args = {
+	local args = {
 	[1] = "SpawnAllyODD",
 	[2] = unit
 	}
