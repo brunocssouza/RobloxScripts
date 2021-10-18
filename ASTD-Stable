@@ -1,3 +1,6 @@
+wait(10)
+
+
 function Spawn(unit)
 	local args = {
 	[1] = "SpawnAllyODD",
